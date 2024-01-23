@@ -14,7 +14,6 @@ public class Proyecto extends JFrame{
       this.setTitle("Datos Personales"); // Titulo de la ventana
       this.setLocationRelativeTo(null); // Ubicar la ventana en el centro de la pantalla
       this.setDefaultCloseOperation(EXIT_ON_CLOSE); // Terminar la ejecucion del programa cuando se cierre la ventana 
-      this.getContentPane().setBackground(Color.BLACK); // Se establece un color de fondo para la ventana
       this.setResizable(false);
       iniciarComponentes();
 
