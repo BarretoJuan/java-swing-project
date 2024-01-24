@@ -9,4 +9,4 @@ static Color lightBlue = new Color(211,222,255,255);
 static Color darkYellow = new Color(179,128,54,255);
 static Color lightYellow = new Color(255,184,77,255);
 
-}
+} //Colores class
