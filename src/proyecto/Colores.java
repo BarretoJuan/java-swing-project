@@ -1,10 +1,6 @@
 package proyecto;
 import java.awt.*;
-import javax.swing.*;
-/**
- *
- * @author juan
- */
+
 public class Colores {
 
 static Color darkBlue = new Color(54,85,179,255);
