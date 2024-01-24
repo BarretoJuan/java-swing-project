@@ -24,9 +24,8 @@ public class Proyecto extends JFrame{
         private void iniciarComponentes() {
             JPanel panel = new JPanel(); //Panel
             panel.setLayout(null);     //Centrar panel
-            panel.setPreferredSize(new Dimension(600,450)); // Modificar preferred size para las posiciones de los elementos
+            panel.setPreferredSize(new Dimension(400,400)); // Modificar preferred size para las posiciones de los elementos
             JScrollPane scrollPane = new JScrollPane(panel); //Crear scrollpane
-            scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); //Establecer un scroll vertical
             this.getContentPane().add(scrollPane); //Agregar el ScrollPanel al content pane
             
             JLabel etiquetaInicio = new JLabel();
