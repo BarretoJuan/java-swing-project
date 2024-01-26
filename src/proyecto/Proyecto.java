@@ -1,7 +1,10 @@
 package proyecto;
 import java.awt.*;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
+
 import javax.swing.*;
 import org.jdesktop.swingx.JXDatePicker;
 import org.jdesktop.swingx.plaf.basic.CalendarHeaderHandler;
@@ -150,10 +153,16 @@ public class Proyecto extends JFrame{
             panel.setBackground(Colores.lightBlue);
             
 
-            UIManager.put(CalendarHeaderHandler.uiControllerID, SpinningCalendarHeaderHandler.class.getName());
-            JXDatePicker picker = new JXDatePicker();
-            picker.getMonthView().setZoomable(true);
-            picker.setBounds(0,460,600,50);
+            UIManager.put(CalendarHeaderHandler.uiControllerID, SpinningCalendarHeaderHandler.class.getName()); 
+            JXDatePicker picker = new JXDatePicker(new Locale("es")); //Initialize a JXDatePicker using the ISO language "es" for Spanish 
+            picker.getMonthView().setZoomable(true); //This line of code, and the UIManager one enable an experimental feature to allow yearly navigation through the calendar
+            picker.setFormats(new SimpleDateFormat("dd/MM/yyyy")); //Setting a date format
+            picker.getEditor().setEnabled(false); //The JXDatePicker Component is essentially made of two embedded components: The calendar itself, and a FormattedTextField where the input is displayed, the .getEditor() method allows us to interact specifically with the TextField, on this case I disabled it, in order to force the user to enter a date only using the Date Picker
+            picker.getEditor().setDisabledTextColor(Color.BLACK);  //After using the setEnabled(false) method, the FormattedTextField is visually disabled too, rendering the text in a transparent, blue-ish tone, this method overrides that color, making it look as if it wasn't disabled
+            picker.setBounds(0,460,130,30);
+
+
+
             panel.add(picker);
   
 
