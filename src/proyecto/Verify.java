@@ -19,11 +19,13 @@ public class Verify {
                     return true;
                 }       
                 else {
-                    JOptionPane.showMessageDialog(null, "El código debe ser un entero positivo de máximo 4 dígitos", "Warning", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "El código debe ser un entero positivo de máximo 4 dígitos", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+                    textField.setText("");
                     return false;
                 }    
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "El código debe ser un entero positivo de máximo 4 dígitos", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "El código debe ser un entero positivo de máximo 4 dígitos", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+                textField.setText("");
                 return false;
                 
                 }
@@ -42,11 +44,13 @@ public class Verify {
                 return true;
             }       
             else {
-                JOptionPane.showMessageDialog(null, "La cédula debe ser un entero positivo de máximo 8 dígitos", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "La cédula debe ser un entero positivo de máximo 8 dígitos", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+                textField.setText("");
                 return false;
             }    
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "La cédula debe ser un entero positivo de máximo 8 dígitos", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "La cédula debe ser un entero positivo de máximo 8 dígitos", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+            textField.setText("");
             return false;
             
             }
@@ -71,7 +75,8 @@ public class Verify {
             
 
             else {
-                JOptionPane.showMessageDialog(null, "El campo no debe tener más de "+maxLength+ " caracteres", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "El campo no debe tener más de "+maxLength+ " caracteres", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+                textField.setText("");
                 return false;
             }
         }
@@ -92,7 +97,8 @@ public class Verify {
             if (email.matches(emailRegex)) {
                 return true;
             } else {
-                JOptionPane.showMessageDialog(null, "Ingrese una dirección de correo electrónico válida", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Ingrese una dirección de correo electrónico válida", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+                textField.setText("");
                 return false;
             }
         }
@@ -113,7 +119,8 @@ public class Verify {
         if (telefono.matches(telefonoRegex)) {
             return true;
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrese un teléfono válid", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Ingrese un teléfono válido", "Alerta: Dato Incorrecto", JOptionPane.WARNING_MESSAGE);
+            textField.setText("");
             return false;
         }
     }
